@@ -1,73 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="{url _for('static',filename='css/style.css')}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <style>
-        body {
-            background-image: url('https://www.fatosdesconhecidos.com.br/wp-content/uploads/2023/06/Apple-capa.png');
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-size: cover;
-        }
-        .login-container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            text-align: center;
-        }
-        .login-container h2 {
-            margin-bottom: 20px;
-        }
-        .login-container input {
-            width: 90%;
-            padding: 10px;
-            margin: 10px ;
-            border: 1px solid #1d0202;
-            border-radius: 40px;
-            text-align: center;
-        }
-        .login-container button {
-            width: 100%;
-            padding: 10px;
-            background-color: #00ff08;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            
-        }
-        .login-container button:hover {
-            background-color: #45a049;
-        }
-        .login-container a {
-            display: block;
-            margin-top: 10px;
-            color: #007BFF;
-            text-decoration: none;
-        }
-        .login-container a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <title>Formulário de Cadastro</title>
 </head>
 <body>
-    <div class="login-container">
-        <img src="https://help.apple.com/assets/654E7A78B450BEA420068D51/654E7A7AB450BEA420068D57/pt_BR/cfef5ce601689564e0a39b4773f20815.png" alt="Logo da Empresa" width="100" height="100">
-        <h2>Entrar</h2>
-        <form action="login.php" method="post">
-            <input type="text" name="aluno" placeholder="Nome do Aluno" required>
-            <input type="text" name="ra" placeholder="RA" required>
-            <input type="text" name="tp" placeholder="tempo estudo" required>
-            <input type="text" name="rf" placeholder="Renda Familiar" required>
-            <input type="submit" value="Cadastrar">
-        </form>
-    </div>
-</body> 
+    <h2> Formulário de Cadastro de Alunos</h2>
+    <form action="/criaraluno" method="POST">
+
+        <label for="ra">RA:</label>
+        <input type="text" id="ra" name="ra" maxlength="8" required>
+        <br><br>
+        <label for="nome">Nome Completo:</label>
+        <input type="text" id="nome" name="nome"  required>
+        <br><br>
+        <label for="tempoestudo">Tempo Estudo:</label>
+        <input type="number" id="tempoestudo" name="tempoestudo" required>
+        <br><br>
+        <label for="rendafamiliar">Renda familiar:</label>
+        <input type="text" id="rendafamiliar" name="rendafamiliar" required>
+        <br><br>
+        <input type="submit" id="botao" value="enviar">
+    </form>   
+   
+</body>
+</html>
